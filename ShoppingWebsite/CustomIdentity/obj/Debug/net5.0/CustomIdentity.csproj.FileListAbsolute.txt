@@ -1,0 +1,12 @@
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.csproj.AssemblyReference.cache
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.AssemblyInfoInputs.cache
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.AssemblyInfo.cs
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.csproj.CoreCompileInputs.cache
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\CustomIdentity.deps.json
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\CustomIdentity.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\ref\CustomIdentity.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\CustomIdentity.pdb
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\ref\CustomIdentity.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.pdb

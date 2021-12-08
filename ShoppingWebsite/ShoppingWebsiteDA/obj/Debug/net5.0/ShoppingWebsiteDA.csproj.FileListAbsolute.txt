@@ -1,0 +1,15 @@
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.deps.json
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.runtimeconfig.json
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.runtimeconfig.dev.json
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ref\ShoppingWebsiteDA.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.pdb
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.csproj.AssemblyReference.cache
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.AssemblyInfoInputs.cache
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.AssemblyInfo.cs
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.csproj.CoreCompileInputs.cache
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ref\ShoppingWebsiteDA.dll
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.pdb
+C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.genruntimeconfig.cache
