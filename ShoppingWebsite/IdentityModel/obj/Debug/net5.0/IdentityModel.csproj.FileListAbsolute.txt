@@ -1,5 +1,0 @@
-C:\Users\srividhyav\source\repos\ShoppingWebsite\IdentityModel\obj\Debug\net5.0\IdentityModel.csproj.AssemblyReference.cache
-C:\Users\srividhyav\source\repos\ShoppingWebsite\IdentityModel\obj\Debug\net5.0\IdentityModel.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\srividhyav\source\repos\ShoppingWebsite\IdentityModel\obj\Debug\net5.0\IdentityModel.AssemblyInfoInputs.cache
-C:\Users\srividhyav\source\repos\ShoppingWebsite\IdentityModel\obj\Debug\net5.0\IdentityModel.AssemblyInfo.cs
-C:\Users\srividhyav\source\repos\ShoppingWebsite\IdentityModel\obj\Debug\net5.0\IdentityModel.csproj.CoreCompileInputs.cache
