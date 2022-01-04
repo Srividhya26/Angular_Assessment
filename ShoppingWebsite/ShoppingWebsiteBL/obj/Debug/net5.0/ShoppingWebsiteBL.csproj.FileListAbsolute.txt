@@ -16,3 +16,21 @@ C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net
 C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteDA.dll
 C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteDA.pdb
 C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.csproj.CopyComplete
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteBL.deps.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteBL.runtimeconfig.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteBL.runtimeconfig.dev.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteBL.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ref\ShoppingWebsiteBL.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteBL.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteDA.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\bin\Debug\net5.0\ShoppingWebsiteDA.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.csproj.AssemblyReference.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.AssemblyInfoInputs.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.AssemblyInfo.cs
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.csproj.CoreCompileInputs.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.csproj.CopyComplete
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ref\ShoppingWebsiteBL.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteBL\obj\Debug\net5.0\ShoppingWebsiteBL.genruntimeconfig.cache

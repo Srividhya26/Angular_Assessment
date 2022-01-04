@@ -69,5 +69,16 @@ namespace ShoppingWebsiteBL
             var res = await _product.GetProductByCategory(id);
             return res;
         }
+
+        public void AddImage(ImageVM image)
+        {
+            _product.AddImage(image);
+        }
+
+        public async Task<GetImageVM> GetProductImage(int id)
+        {
+            var res = await _product.GetProductImage(id);
+            return res;
+        }
     }
 }

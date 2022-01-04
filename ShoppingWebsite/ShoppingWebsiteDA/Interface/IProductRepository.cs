@@ -21,5 +21,10 @@ namespace ShoppingWebsiteDA.Interface
         Task<IEnumerable<BrandVM>> GetAllBrands();
 
         Task<IEnumerable<ProductAdmin>> GetProductByCategory(int id);
+
+        void AddImage(ImageVM image);
+
+        Task<GetImageVM> GetProductImage(int ProductId);
+
     }
 }

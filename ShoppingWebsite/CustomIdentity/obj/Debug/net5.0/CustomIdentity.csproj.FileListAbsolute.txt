@@ -10,3 +10,15 @@ C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0
 C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.dll
 C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\ref\CustomIdentity.dll
 C:\Users\srividhyav\source\repos\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\CustomIdentity.deps.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\CustomIdentity.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\ref\CustomIdentity.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\bin\Debug\net5.0\CustomIdentity.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.csproj.AssemblyReference.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.AssemblyInfoInputs.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.AssemblyInfo.cs
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.csproj.CoreCompileInputs.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\ref\CustomIdentity.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\CustomIdentity\obj\Debug\net5.0\CustomIdentity.pdb

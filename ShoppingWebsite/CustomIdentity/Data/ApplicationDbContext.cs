@@ -1,16 +1,17 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using CustomIdentity.IdentityModel;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CustomIdentity
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser,Roles,Guid>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser,Roles,Guid,UserClaims,UserRole,UserLogin,RoleClaim,UserToken>
     {
         public ApplicationDbContext()
         {
@@ -67,6 +68,11 @@ namespace CustomIdentity
                 //b.HasKey(ur => ur.UserId);
 
                 b.ToTable("UsersRole");
+            });
+
+            builder.Entity<UserToken>(b =>
+            {
+                b.ToTable("UserToken");
             });
         }
     }

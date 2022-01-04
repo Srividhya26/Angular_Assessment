@@ -27,6 +27,7 @@ namespace ShoppingWebsiteDA.Data
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserClaim> UserClaims { get; set; }
         public virtual DbSet<UserLogin> UserLogins { get; set; }
+        public virtual DbSet<UserToken> UserTokens { get; set; }
         public virtual DbSet<UsersRole> UsersRoles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -75,17 +76,11 @@ namespace ShoppingWebsiteDA.Data
 
             modelBuilder.Entity<Image>(entity =>
             {
-                entity.Property(e => e.ImageUrl).IsUnicode(false);
-
-                entity.Property(e => e.UploadedAt)
-                    .IsRowVersion()
-                    .IsConcurrencyToken();
-
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.Images)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Image__ProductId__440B1D61");
+                    .HasConstraintName("FK__Image__ProductId__2B0A656D");
             });
 
             modelBuilder.Entity<Product>(entity =>
@@ -153,6 +148,18 @@ namespace ShoppingWebsiteDA.Data
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__UserLogin__UserI__7F2BE32F");
+            });
+
+            modelBuilder.Entity<UserToken>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Value })
+                    .HasName("PK__UserToke__B8B0347E31CB96CC");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.UserTokens)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__UserToken__UserI__19DFD96B");
             });
 
             modelBuilder.Entity<UsersRole>(entity =>

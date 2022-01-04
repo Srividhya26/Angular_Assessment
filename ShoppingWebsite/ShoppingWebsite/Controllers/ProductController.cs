@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
+using CustomIdentity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using ShoppingWebsiteBL;
@@ -12,6 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ShoppingWebsite.Controllers
@@ -24,24 +29,30 @@ namespace ShoppingWebsite.Controllers
         private readonly IWebHostEnvironment _hosting;
         private readonly IMapper _mapper;
         private readonly IConfiguration _config;
+        private readonly UserManager<ApplicationUser> _user;
 
-        public ProductController(IProductsBL product, IWebHostEnvironment hosting, IMapper mapper, IConfiguration configuration)
+        public ProductController(UserManager<ApplicationUser> user,IProductsBL product, IWebHostEnvironment hosting, IMapper mapper, IConfiguration configuration)
         {
             this._product = product;
             this._hosting = hosting;
             this._mapper = mapper;
             this._config = configuration;
+            this._user = user;
         }
 
         //Get products
         [HttpGet]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> GetAllProducts()
         {
+
             try
             {
+                var currentUserId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value;
                 var listOfProducts = await _product.GetAllProducts();
                 return Ok(listOfProducts);
             }
+
             catch (Exception e)
             {
                 return StatusCode(statusCode: 500, e.Message);
@@ -50,6 +61,7 @@ namespace ShoppingWebsite.Controllers
 
         //Get products for user
         [HttpGet]
+        [Authorize(Roles = "USER")]
         public async Task<IActionResult> GetAllProductForUser()
         {
             try
@@ -103,7 +115,7 @@ namespace ShoppingWebsite.Controllers
             try
             {
                 _product.AddProduct(product);
-                
+
             }
             catch (Exception e)
             {
@@ -113,11 +125,48 @@ namespace ShoppingWebsite.Controllers
 
         //get product based on category
         [HttpGet]
-        public void GetProductByCategory(int id)
+        public async Task<IActionResult> GetProductByCategory(int id)
+        {
+            if (id == default)
+            {
+                var listOfProducts = await _product.GetAllProductForUser();
+                return Ok(listOfProducts);
+            }
+
+            else
+            {
+                var result = await _product.GetProductByCategory(id);
+                return Ok(result);
+            }
+        }
+
+        [HttpPost]
+        //Create image
+        public void CreateImage([FromForm] ImageVM image)
         {
             try
             {
-                _product.GetProductByCategory(id);
+                var productIds = HttpContext.Request.Form["ProductId"];
+                int id = int.Parse(productIds);
+                var fileName = HttpContext.Request.Form["FileName"];
+
+                string uploadPath = Path.Combine(_hosting.ContentRootPath, "Images").ToString();
+                string storeImage = Path.Combine(_hosting.ContentRootPath, "UploadedImage").ToString();
+
+                var filePath = Path.Combine(uploadPath, fileName);
+                var storeImagePath = Path.Combine(storeImage, fileName);
+
+                using (var stream = System.IO.File.OpenRead(filePath))
+                {
+                    ImageVM images = new ImageVM
+                    {
+                        ProductId = id,
+                        FileName = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name)),
+                    };
+
+                    images.FileName.CopyTo(new FileStream(storeImagePath, FileMode.Create));
+                    _product.AddImage(images);
+                }
             }
             catch (Exception e)
             {
@@ -125,43 +174,31 @@ namespace ShoppingWebsite.Controllers
             }
         }
 
-        //[HttpPost]
-        ////Create image
-        //public void CreateImage([FromBody] ImageVM image)
-        //{
-        //    try
-        //    {
-                  
-        //    }
-        //    catch
-        //    {
-
-        //    }
-        //}
-
-
-        //for uploading the image
-        [HttpPost]
-        public string UploadFile([FromBody] ImageVM image)
+        [Route("{ProductId}")]
+        [HttpGet]
+        //get image for products
+        public async Task<IActionResult> GetProductImage(int ProductId)
         {
-            //String timeStamp = GetTimestamp(DateTime.Now);
-            string fileName = null;
-            if (image.ImageName != null)
+            try
             {
-                string uploadPhoto = Path.Combine(_hosting.WebRootPath, "images");
-                fileName = image.ImageName.FileName;
+                var productImage = await _product.GetProductImage(ProductId);
+                
+                string filePath = Path.Combine(_config.GetSection("Image").GetSection("Path").Value.ToString(), productImage.ImageName);
 
-                string filePath = Path.Combine(uploadPhoto, fileName);
-                image.ImageName.CopyTo(new FileStream(filePath, FileMode.Create));
+                if (filePath != null)
+                {
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        byte[] b = System.IO.File.ReadAllBytes(filePath);
+                        return File(b, "image/png");
+                    }
+                }
+                return null;
             }
-            return fileName;
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
-
-        //public static String GetTimestamp(DateTime value)
-        //{
-        //    return value.ToString("yyyyMMddHHmmssffff");
-        //}
-
-        
     }
 }

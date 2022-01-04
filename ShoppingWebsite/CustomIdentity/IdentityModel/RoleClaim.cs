@@ -9,6 +9,6 @@ namespace CustomIdentity
 {
     public class RoleClaim : IdentityRoleClaim<Guid>
     {
-
+        public virtual Roles role { get; set; }
     }
 }

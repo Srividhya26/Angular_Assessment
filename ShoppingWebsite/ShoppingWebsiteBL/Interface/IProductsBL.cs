@@ -1,4 +1,5 @@
-﻿using ShoppingWebsiteBL.ViewModel;
+﻿using Microsoft.AspNetCore.Http;
+using ShoppingWebsiteBL.ViewModel;
 using ShoppingWebsiteDA.Model;
 using ShoppingWebsiteDA.ViewModels;
 using System;
@@ -21,6 +22,9 @@ namespace ShoppingWebsiteBL.IProductBL
         Task<IEnumerable<BrandVM>> GetAllBrands();
 
         Task<IEnumerable<ProductAdmin>> GetProductByCategory(int id);
-        
+
+        void AddImage(ImageVM image);
+
+        Task<GetImageVM> GetProductImage(int ProductId);
     }
 }

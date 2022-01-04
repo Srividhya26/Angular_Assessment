@@ -1,0 +1,15 @@
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\bin\Debug\net5.0\CustomerFeedbackDA.deps.json
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\bin\Debug\net5.0\CustomerFeedbackDA.runtimeconfig.json
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\bin\Debug\net5.0\CustomerFeedbackDA.runtimeconfig.dev.json
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\bin\Debug\net5.0\CustomerFeedbackDA.dll
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\bin\Debug\net5.0\ref\CustomerFeedbackDA.dll
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\bin\Debug\net5.0\CustomerFeedbackDA.pdb
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.csproj.AssemblyReference.cache
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.AssemblyInfoInputs.cache
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.AssemblyInfo.cs
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.csproj.CoreCompileInputs.cache
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.dll
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\ref\CustomerFeedbackDA.dll
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.pdb
+D:\Angular Assessment\Angular_Assessment\CustomerFeedback\CustomerFeedbackDA\obj\Debug\net5.0\CustomerFeedbackDA.genruntimeconfig.cache

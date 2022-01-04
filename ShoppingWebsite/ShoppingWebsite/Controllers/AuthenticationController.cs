@@ -60,10 +60,15 @@ namespace ShoppingWebsite.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     new Response { Status = "Error", Message = "User creation failed" });
             }
-            else
+
+            if (!await _role.RoleExistsAsync("USER"))
+                await _role.CreateAsync(new Roles("USER"));
+
+            if (await _role.RoleExistsAsync("USER"))
             {
-                return Ok(new Response { Status = "Success", Message = "User created Successfully" });
+                await _user.AddToRoleAsync(user, "USER");
             }
+            return Ok(new Response { Status = "Success", Message = "User created Successfully" });
 
         }
 
@@ -73,78 +78,75 @@ namespace ShoppingWebsite.Controllers
         {
             var user = await _user.FindByNameAsync(login.UserName);
 
-            if(user != null )
+            if (user != null && await _user.CheckPasswordAsync(user, login.Password))
             {
-                var res = await _signIn.CheckPasswordSignInAsync(user, login.Password, false);
+                var userRoles = await _user.GetRolesAsync(user);
 
-                try
+                var authClaims = new List<Claim>
                 {
-                    if (res.Succeeded)
-                    {
-                        var authClaims = new List<Claim>
-                        {
-                            new Claim(ClaimTypes.Name,user.UserName),
-                            new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
-                        };
+                    new Claim(ClaimTypes.Name,user.UserName),
+                    new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),                    
+                };
 
-                        var authSignKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-                        var token = new JwtSecurityToken(
-                            issuer: _configuration["JWT:ValidIssuer"],
-                            audience: _configuration["JWT:ValidAudience"],
-                            expires: DateTime.Now.AddHours(3),
-                            claims: authClaims,
-                            signingCredentials: new SigningCredentials(authSignKey, SecurityAlgorithms.HmacSha256));
-
-                        //return Ok("Successfully Logged in");
-                        return Ok(new
-                        {
-                            token = new JwtSecurityTokenHandler().WriteToken(token)
-                        });
-                    }
-
-                    return Ok("invalid attempt");
+                foreach (var userRole in userRoles)
+                {
+                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                 }
 
-                catch(Exception e)
-                {
-                    return Ok(e.Message);
-                }
+                var authSignKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
 
+                var token = new JwtSecurityToken(
+                    issuer: _configuration["JWT:ValidIssuer"],
+                    audience: _configuration["JWT:ValidAudience"],
+                    expires: DateTime.Now.AddHours(3),
+                    claims: authClaims,
+                    signingCredentials: new SigningCredentials(authSignKey, SecurityAlgorithms.HmacSha256));
+
+                return Ok(new
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token)
+                });
             }
-
-            return Ok(" ");
-
-            //if (user != null && await _user.CheckPasswordAsync(user, login.Password))
-            //{
-            //    //var userRoles = await _user.GetRolesAsync(user);
-               
-            //    var authClaims = new List<Claim>
-            //    {
-            //        new Claim(ClaimTypes.Name,user.UserName),
-            //        new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
-            //    };
-            //    foreach (var userRole in userRoles)
-            //    {
-            //        authClaims.Add(new Claim(ClaimTypes.Role, userRole));
-            //    }
-            //    var authSignKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-            //    var token = new JwtSecurityToken(
-            //        issuer: _configuration["JWT:ValidIssuer"],
-            //        audience: _configuration["JWT:ValidAudience"],
-            //        expires: DateTime.Now.AddHours(3),
-            //        claims: authClaims,
-            //        signingCredentials: new SigningCredentials(authSignKey, SecurityAlgorithms.HmacSha256));
-
-            //    return Ok(new
-            //    {
-            //        token = new JwtSecurityTokenHandler().WriteToken(token)
-            //    });
-            //}
-            //return Unauthorized();
+            return Unauthorized();
         }
 
+        [HttpPost]
+        [Route("RegisterAdmin")]
+        public async Task<IActionResult> RegisterAdmin([FromBody] Register register)
+        {
+            var userExist = await _user.FindByNameAsync(register.UserName);
+            if (userExist != null)
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new Response { Status = "Error", Message = "User already exist" });
 
 
+            ApplicationUser user = new ApplicationUser()
+            {
+                Email = register.Email,
+                SecurityStamp = Guid.NewGuid().ToString(),
+                UserName = register.UserName
+            };
+
+            var result = await _user.CreateAsync(user, register.Password);
+
+            if (!result.Succeeded)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new Response { Status = "Error", Message = "User creation failed" });
+            }
+
+            if (!await _role.RoleExistsAsync("ADMIN"))
+                await _role.CreateAsync(new Roles("ADMIN"));
+
+            if (await _role.RoleExistsAsync("ADMIN"))
+            {
+                await _user.AddToRoleAsync(user,"ADMIN");
+            }
+
+            return Ok(new Response { Status = "Success", Message = "User created Successfully" });
+        }
 
     }
 }

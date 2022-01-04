@@ -16,6 +16,7 @@ namespace ShoppingWebsiteDA.Model
             Categories = new HashSet<Category>();
             UserClaims = new HashSet<UserClaim>();
             UserLogins = new HashSet<UserLogin>();
+            UserTokens = new HashSet<UserToken>();
             UsersRoles = new HashSet<UsersRole>();
         }
 
@@ -48,6 +49,8 @@ namespace ShoppingWebsiteDA.Model
         public virtual ICollection<UserClaim> UserClaims { get; set; }
         [InverseProperty(nameof(UserLogin.User))]
         public virtual ICollection<UserLogin> UserLogins { get; set; }
+        [InverseProperty(nameof(UserToken.User))]
+        public virtual ICollection<UserToken> UserTokens { get; set; }
         [InverseProperty(nameof(UsersRole.User))]
         public virtual ICollection<UsersRole> UsersRoles { get; set; }
     }

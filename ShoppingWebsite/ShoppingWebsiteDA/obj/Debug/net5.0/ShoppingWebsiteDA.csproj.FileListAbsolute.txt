@@ -13,3 +13,18 @@ C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net
 C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ref\ShoppingWebsiteDA.dll
 C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.pdb
 C:\Users\srividhyav\source\repos\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.genruntimeconfig.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.deps.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.runtimeconfig.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.runtimeconfig.dev.json
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ref\ShoppingWebsiteDA.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\bin\Debug\net5.0\ShoppingWebsiteDA.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.csproj.AssemblyReference.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.AssemblyInfoInputs.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.AssemblyInfo.cs
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.csproj.CoreCompileInputs.cache
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ref\ShoppingWebsiteDA.dll
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.pdb
+D:\Angular Assessment\Angular_Assessment\ShoppingWebsite\ShoppingWebsiteDA\obj\Debug\net5.0\ShoppingWebsiteDA.genruntimeconfig.cache

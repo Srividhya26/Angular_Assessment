@@ -9,6 +9,11 @@ namespace CustomIdentity
 {
     public class UserClaims : IdentityUserClaim<Guid>
     {
+        public UserClaims()
+        {
 
+        }
+
+        public virtual ApplicationUser User { get; set; }
     }
 }

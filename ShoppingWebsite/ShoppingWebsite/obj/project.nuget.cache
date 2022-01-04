@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tfvqUWZpgSQoKLcWi/jm9wwf24uaA0TZrwDxGmAckmK/x7LwRYJOTyn8y9OpZ62s6NdmWyjfPu1qiTiZYLVfcA==",
+  "dgSpecHash": "BgJyNHg9c7Eb8xKe9N3M1hmlsnQOnlLRcN0RxRbDowiH52JJ2TKYq4BMkmoibMhxXMB7LK3SHBXXUOzZmadZJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsite\\ShoppingWebsite.csproj",
+  "projectFilePath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsite\\ShoppingWebsite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srividhyav\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\srividhyav\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",

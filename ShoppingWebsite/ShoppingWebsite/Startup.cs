@@ -110,7 +110,7 @@ namespace ShoppingWebsite
             app.UseAuthentication();
             app.UseCors("CorsPolicy");
             app.UseAuthorization();
-            
+      
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

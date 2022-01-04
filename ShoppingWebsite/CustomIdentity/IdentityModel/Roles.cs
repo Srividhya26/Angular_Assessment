@@ -9,6 +9,17 @@ namespace CustomIdentity
 {
     public class Roles : IdentityRole<Guid>
     {
+        public Roles()
+        {
 
+        }
+
+        public Roles(string roleName) : base(roleName)
+        {
+
+        }
+
+        public virtual ICollection<UserRole> UserRoles { get; set; }
+        public virtual ICollection<RoleClaim> RoleClaim { get; set; }
     }
 }

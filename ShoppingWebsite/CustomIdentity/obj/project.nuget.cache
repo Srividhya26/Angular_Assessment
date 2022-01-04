@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LWy45GrKfAdR6wnqA+LG7YUUvPP7E7dZVgXnxURQK72BjQPvaTzzjljX0WIBC/UhP8/aOX3Kco1DIjhncLInoQ==",
+  "dgSpecHash": "7t/w0hEuFZsZ9/7r9pR+7eJaDY9P7GdqoYbke7PDzlvWIo+YVtgtspsUwg/opy+NN5H8cXeKOqagpN/B1JxqHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\CustomIdentity\\CustomIdentity.csproj",
+  "projectFilePath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\CustomIdentity\\CustomIdentity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srividhyav\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\srividhyav\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",

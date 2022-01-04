@@ -9,6 +9,11 @@ namespace CustomIdentity
 {
     public class UserLogin : IdentityUserLogin<Guid>
     {
+        public UserLogin()
+        {
 
+        }
+
+        public virtual ApplicationUser User { get; set; }
     }
 }

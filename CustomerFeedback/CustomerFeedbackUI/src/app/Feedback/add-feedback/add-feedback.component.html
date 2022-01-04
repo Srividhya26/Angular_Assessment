@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card">
+        <h3 class="title"> Customer Satisfactory Feedback </h3>
+        <div class="design"></div>
+        <form [formGroup] = "formValue">
+            <div class="heading">
+                <h6 class="heading-text"> Product Information </h6>
+             </div>
+             <div class="form-group row forms">
+                 <label class="col-sm-2 col-form-label">  Category* </label>
+                 <select class="form-control select" (change)= "getCategoryId($event)">
+                     <option> Select </option>
+                     <option *ngFor= "let category of categories" value = {{category.id}}>
+                        {{category.name}} 
+                     </option>
+                     <option value = 0> Others </option>
+                 </select>
+                 <label class="col-sm-2 col-form-label"> Product* </label>
+                 <select class="form-control select" formControlName = "productId" >
+                     <option value= 0> Select </option>
+                     <option *ngFor= "let product of products" [ngValue]= "product.id" value= {{product.id}}>
+                        {{product.name}}
+                     </option>
+                     <option> Others </option>
+                 </select>
+             </div>
+             <div class="form-group row forms">
+              <label> Overall how satisfied were you with the product/ <br> service* </label>
+              <div *ngFor = "let review of reviews">
+                 <input class="radioButton"  type="radio" formControlName = "reviewId"  name="reviewId" [value] = "review.id" (click) = "setRadio(review.name)" value= {{review.id}} >
+                 <label > {{review.name}} </label>
+              </div>
+             </div>
+             <div class="form-group row forms">
+                 <label>  
+                     Which of the following category have you purchased <br> in
+                     the last 2 months.Please check all that apply 
+                 </label>
+                 <div class="form-check checkBox">
+                     <input class="form-check-input" type="checkbox" (change) = "checkValue($event)" formControlName = "lastPurchasedItem" value= "AC" id="airConditioner">
+                     <label class="form-check-label" for="airConditioner">
+                       Air Condtioner
+                     </label>
+                  </div>
+                  <div class="form-check checkBox">
+                     <input class="form-check-input" type="checkbox" (change) = "checkValue($event)" formControlName = "lastPurchasedItem" value="TV" id="tv">
+                     <label class="form-check-label" for="tv">
+                       TV
+                     </label>
+                  </div>
+                  <div class="form-check checkBox">
+                     <input class="form-check-input" type="checkbox" (change) = "checkValue($event)" formControlName = "lastPurchasedItem" value="Mobile" id="mobile">
+                     <label class="form-check-label" for="mobile">
+                       Mobile
+                     </label>
+                  </div>
+             </div>
+             <div class="form-group row forms">
+                <label> What do you like about the product/service*  </label>
+                <textarea class="form-control textarea"  name="productFeedback" formControlName = "productFeedback"></textarea>
+                <div class="error" *ngIf= "!formValue.get('productFeedback').valid && formValue.get('productFeedback').touched"> Product Feedback is required </div>
+             </div>
+             <hr>
+             <div class="heading">
+                 <h6 class="heading-text"> User Information </h6>
+             </div>
+             <label class="forms"> Name* </label>
+             <div class="form-group row forms">
+                 <select class="form-control select"  formControlName = "title">
+                     <option value= 0> Title* </option>
+                     <option value="Mr"> Mr </option>
+                     <option value="Ms"> Ms </option>
+                     <option value="Mrs"> Mrs </option>
+                 </select>
+                 <input class="form-control inputField" [disabled]= "!formDisable"  placeholder="First*" name="firstName" formControlName = "firstName" > 
+                 <input class="form-control initial"  placeholder="Initials" name="initial" formControlName = "initial">                
+             </div>
+             <div class="error" *ngIf= "!formValue.get('initial').valid && formValue.get('initial').touched || !formValue.get('firstName').valid && formValue.get('firstName').touched"> This field is required </div>
+             <div class="form-group address">
+              <input class="form-control" appEmail  placeholder="Email*" name="email" formControlName = "email">
+              <div class="error" *ngIf= "!formValue.get('email').valid && formValue.get('email').touched"> Email is required </div>
+             </div>
+             <div class="form-group address">
+                 <input class="form-control"  placeholder="Street Address*" name="streetAddress" formControlName = "streetAddress">
+                 <div class="error" *ngIf= "!formValue.get('streetAddress').valid && formValue.get('streetAddress').touched"> Address is required </div>
+             </div>
+             <div class="form-group address">
+                 <input class="form-control"  placeholder="Street Address 2" name="streetAddress2" formControlName = "streetAddress2">
+             </div>
+             <div class="form-group row forms">
+                 <input class="form-control col-sm-5"  placeholder="City*" name="city" formControlName = "city" >
+                 <input class="form-control col-sm-5 checkBox"  placeholder="Region*" formControlName = "region">                
+             </div>
+             <div class="error" *ngIf= "!formValue.get('region').valid && formValue.get('region').touched || !formValue.get('city').valid && formValue.get('city').touched"> This field is required </div>
+             <div class="form-group row forms">
+                 <input class="form-control col-sm-5"  placeholder="Zip Code/Postal*" name="postalCode" formControlName = "postalCode">
+                 <input class="form-control col-sm-5 checkBox"  placeholder="Country*" name="country" formControlName = "country">
+             </div>
+             <div class="error" *ngIf= "!formValue.get('country').valid && formValue.get('country').touched || !formValue.get('postalCode').valid && formValue.get('postalCode').touched"> This field is required </div>
+             <hr>
+             <div *ngIf= "isSelected('Unsatisfied')">
+              <div class="heading">
+                <h6 class="heading-text"> More about unsatisfactory </h6>
+              </div>
+              <label class="forms">
+                Reason for unsatisfaction*
+              </label>
+              <div class="form-group">
+                <textarea class="form-control textareas"  name="reasonForUnSatisfaction" formControlName = "reasonForUnSatisfaction"></textarea>
+              </div>
+             </div>
+             <div class="fileUpload">
+                 <input class="files" type="file"  name="fileUpload" (change) = "onFileChanged($event)" formControlName = "fileUpload">
+                 <div class="error" *ngIf= "!formValue.get('fileUpload').valid && formValue.get('fileUpload').touched"> Please upload a file </div>
+             </div>
+             
+             <div class="actions">
+                 <button class="btn btn-danger buttondesign" type="submit" (click)= "reset()"> Reset </button>
+                 <button class="btn btn-success buttondesign" type="submit" [disabled]= "formValue.invalid" (click) = "addFeedback()"> Submit </button>
+             </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj": {}
+    "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj": {
+    "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj",
+        "projectUniqueName": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj",
         "projectName": "ShoppingWebsiteDA",
-        "projectPath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj",
+        "projectPath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj",
         "packagesPath": "C:\\Users\\srividhyav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\obj\\",
+        "outputPath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

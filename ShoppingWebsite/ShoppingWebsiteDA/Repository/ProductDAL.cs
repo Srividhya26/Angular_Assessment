@@ -21,12 +21,58 @@ namespace ShoppingWebsiteDA.Access
     {
         private readonly IConfiguration _configuration;
         private readonly ShoppingWebsiteContext _db;
+        private readonly IHostingEnvironment _hosting;
 
 
-        public ProductDAL(IConfiguration configuration,ShoppingWebsiteContext db)
+        public ProductDAL(IConfiguration configuration,ShoppingWebsiteContext db,IHostingEnvironment hosting)
         {
             this._configuration = configuration;
             this._db = db;
+            this._hosting = hosting;
+        }
+
+        public void AddImage(ImageVM image)
+        {
+            AddImage images = this.GetProductIdForImage(image);
+            FileInfo info = new(image.FileName.FileName);
+
+            Image image1 = new();
+
+            image1.ProductId = images.ProductId;
+            image1.Version = images.Version;
+            image1.ImageName = images.ImageUrl;
+            image1.FileName = string.Concat(DateTime.UtcNow.ToString("yyyyMMddTHHss"), info.Extension);
+
+            _db.Add(image1);
+
+            _db.SaveChanges();           
+        }
+
+        public AddImage GetProductIdForImage(ImageVM image)
+        {
+            AddImage images = new();
+            
+            int version = 0;
+            string fileName;
+            string imageName;
+
+            if(image.FileName != null)
+            {
+                version = _db.Images.Where(x => x.ProductId == image.ProductId).Count();
+                version += 1;
+               
+                fileName = image.FileName.FileName;
+
+                imageName = Path.Combine(_hosting.ContentRootPath, "UploadedImage", fileName);
+                
+                images.Version = version;
+                images.ImageUrl = imageName;
+                images.ProductId = image.ProductId;
+
+                return images;
+            }
+
+            return images;
         }
 
         public void AddProduct(CreateProduct product)
@@ -93,14 +139,26 @@ namespace ShoppingWebsiteDA.Access
         {
             using IDbConnection dbConnection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
 
-            string sp = "Sp_GetProductByCategory";
+            string sp = "[dbo].[Sp_GetProductByCategory]";
 
             DynamicParameters parameters = new();
 
-            parameters.Add("@CategoryId", id);
+            parameters.Add("CategoryId", id);
 
             return await Task.FromResult(dbConnection.Query<ProductAdmin>(sp, parameters, commandType: CommandType.StoredProcedure).ToList());
+        }
 
+        public async Task<GetImageVM> GetProductImage(int ProductId)
+        {
+            using IDbConnection dbConnection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+
+            string sp = "[dbo].[Sp_GetProductImage]";
+
+            DynamicParameters parameters = new();
+
+            parameters.Add("ProductId", ProductId);
+
+            return await Task.FromResult(dbConnection.Query<GetImageVM>(sp,parameters, commandType: CommandType.StoredProcedure).FirstOrDefault());
         }
     }
 }

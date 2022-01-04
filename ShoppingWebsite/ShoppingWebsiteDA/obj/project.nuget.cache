@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j10ysBS602D1aNDg0Ag8bh1CbHRnkdCyelPnHZFxqTKnj2LOFxJmybd8SZ5HTJGxcWJ7H1/jz3v80GSrB6bdxg==",
+  "dgSpecHash": "nU+EAeoQuvvCqEQR0nyPap540SuVa8DP7lAEZYpswVmS4RppmPj6aKwORv9rf62afjIwdhdpdzXNe1+HjaBNFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj",
+  "projectFilePath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srividhyav\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\srividhyav\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

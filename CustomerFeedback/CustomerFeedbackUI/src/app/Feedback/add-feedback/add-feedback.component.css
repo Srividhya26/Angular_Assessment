@@ -1,0 +1,132 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card
+{
+    width: 1000px;
+    min-height: 550px;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.title
+{
+    padding: 10px;
+    text-align: center;
+}
+
+.design
+{
+    height: 10px;
+    background-color: gray;
+    width : 95%;
+    margin-left: 20px;
+}
+
+.heading
+{
+    height: 40px;
+    width: 95%;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgb(192, 185, 185);
+    border-radius: 25px;
+}
+
+.heading-text
+{
+    padding: 10px;
+}
+
+.forms
+{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.select
+{
+    width: 30%;
+}
+
+.textarea
+{
+    width: 60%;
+    margin-left: 35px;
+}
+
+.radioButton
+{
+    margin-left: 30px;
+}
+
+.checkBox
+{
+    margin-left: 30px;
+}
+
+.inputField
+{
+    width: 40%;
+    margin-left: 10px;
+}
+
+.initial
+{
+    width: 21%;
+    margin-left: 10px;
+}
+
+.address
+{
+    width: 92.5%;
+    margin-left: 20px;
+}
+
+.textareas
+{
+    width: 90%;
+    margin-left: 35px;
+}
+
+.fileUpload
+{
+    height: 70px;
+    width: 95%;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgb(192, 185, 185);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.files
+{
+    text-align: center;
+    padding: 23px;
+}
+
+.actions
+{
+    padding-left: 400px;
+    margin-bottom: 20px;
+}
+
+.buttondesign
+{
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.error
+{
+    color: red;
+    text-align: center;
+}
+
+

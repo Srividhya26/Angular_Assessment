@@ -6803,11 +6803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteBL\\ShoppingWebsiteBL.csproj",
+      "projectUniqueName": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteBL\\ShoppingWebsiteBL.csproj",
       "projectName": "ShoppingWebsiteBL",
-      "projectPath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteBL\\ShoppingWebsiteBL.csproj",
+      "projectPath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteBL\\ShoppingWebsiteBL.csproj",
       "packagesPath": "C:\\Users\\srividhyav\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteBL\\obj\\",
+      "outputPath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteBL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6828,8 +6828,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj": {
-              "projectPath": "C:\\Users\\srividhyav\\source\\repos\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj"
+            "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj": {
+              "projectPath": "D:\\Angular Assessment\\Angular_Assessment\\ShoppingWebsite\\ShoppingWebsiteDA\\ShoppingWebsiteDA.csproj"
             }
           }
         }

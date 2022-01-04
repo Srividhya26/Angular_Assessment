@@ -25,4 +25,9 @@
     <ProjectReference Include="..\ShoppingWebsiteBL\ShoppingWebsiteBL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="UploadedImage\" />
+  </ItemGroup>
+
 </Project>
